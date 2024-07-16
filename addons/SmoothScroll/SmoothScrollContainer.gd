@@ -123,7 +123,7 @@ func _ready() -> void:
 	get_viewport().gui_focus_changed.connect(_on_focus_changed)
 
 	for c in get_children():
-		if not c is ScrollBar:
+		if c is Control:
 			content_node = c
 	
 	add_child(scrollbar_hide_timer)
